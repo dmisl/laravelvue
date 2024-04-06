@@ -1,5 +1,10 @@
-import {createApp} from 'vue'
+import { createApp } from 'vue/dist/vue.esm-bundler.js';
 
-import App from './App.vue'
+import SomeComponent from './components/SomeComponent.vue'
 
-createApp(App).mount("#app")
+const app = createApp({});
+
+app
+    .component('SomeComponent', SomeComponent)
+
+app.mount("#app");
